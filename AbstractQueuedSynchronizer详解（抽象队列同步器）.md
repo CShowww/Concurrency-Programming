@@ -1,6 +1,6 @@
 # 一、概述  
 - AQS是用来构建锁和其他同步组件的基础框架。AQS内部有一个核心变量叫state(volatile类型),代表加锁的状态。另外还有一个变量来记录当前加锁的是哪个线程。此外，AQS内部还有一个FIFO的线程等待队列，被阻塞的线程会依次插入道等待队列的尾部。
-![image](https://note.youdao.com/yws/res/3601/735D0FBB035C4A1791CF9F944FE53163)
+![image](https://github.com/CShowww/Concurrency-Programming/blob/main/img/img1.png)
 
 - state有三种访问方式：getState(),setState(),compareAndSetState()
 
@@ -147,7 +147,7 @@ private static boolean shouldParkAfterFailedAcquire(Node pred, Node node) {
 调用自定义同步器的tryAcquire()尝试直接去获取资源，如果成功则直接返回；  没成功，则addWaiter()将该线程加入等待队列的尾部，并标记为独占模式；  
 acquireQueued()使线程在等待队列中休息，有机会时（轮到自己，会被unpark()）会去尝试获取资源。获取到资源后才返回。如果在整个等待过程中被中断过，则返回true，否则返回false。  
 如果线程在等待过程中被中断过，它是不响应的。只是获取资源后才再进行自我中断selfInterrupt()，将中断补上。  
-![image](https://note.youdao.com/yws/res/3714/BFC41BE1A29A4370BBBF805CA4336DC5)
+![image](https://github.com/CShowww/Concurrency-Programming/blob/main/img/img2.png)
 
 
 3.release(int)方法  
