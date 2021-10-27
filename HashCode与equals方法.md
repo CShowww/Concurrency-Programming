@@ -1,7 +1,7 @@
 
 # 一、什么是hash？
 hash是一个函数，该函数中的实现就是一种算法，就是通过一系列的算法来得到一个hash值，这个时候，我们就需要知道另一个东西，hash表，通过hash算法得到的hash值就在这张hash表中，也就是说，hash表就是所有的hash值组成的，有很多种hash函数，也就代表着有很多种算法得到hash值。
-![image](https://note.youdao.com/yws/res/3930/309D3C04E0DC4AEAA21F5E621B51A7F1)
+![image](https://github.com/CShowww/Concurrency-Programming/blob/main/img/hash.png)
 
 # 二、什么是hashcode？
 hashcode就是通过hash函数得来的，通俗的说，就是通过某一种算法得到的，hashcode就是在hash表中有对应的位置。  
